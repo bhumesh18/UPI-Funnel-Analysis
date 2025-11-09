@@ -1,0 +1,6 @@
+"bank_name","init_count","amount_count","pin_count","bankauth_count","completed_count","pct_amount_of_init","pct_pin_of_amount","pct_bankauth_of_pin","pct_completed_of_bankauth","pct_completed_of_init"
+SBI,2109,2046,1880,1599,1599,97.01,91.89,85.05,100.0,75.82
+HDFC,1753,1697,1561,1356,1356,96.81,91.99,86.87,100.0,77.35
+ICICI,1634,1596,1453,1255,1255,97.67,91.04,86.37,100.0,76.81
+Axis,1488,1443,1307,1154,1154,96.98,90.58,88.29,100.0,77.55
+PNB,1016,981,905,788,788,96.56,92.25,87.07,100.0,77.56
