@@ -1,0 +1,2081 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Extensions />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+    <ZoneVisibilityControl />
+  </document-format-change-manifest>
+  <repository-location id='UPI_Funnel_Analysis' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='error_by_bank.csv' inline='true' name='federated.0qcml4808kq4lw1amc4r70mxqq06' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='error_by_bank.csv' name='textscan.13oi6y61kshzcm11alijm03v3mif'>
+            <connection class='textscan' directory='D:/Workplace/UPI Funnel Analysis/Data/Processed' filename='error_by_bank.csv.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.13oi6y61kshzcm11alijm03v3mif' name='error_by_bank.csv.csv' table='[error_by_bank.csv#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='bank_name' ordinal='0' />
+            <column datatype='string' name='final_error_code' ordinal='1' />
+            <column datatype='integer' name='fail_count' ordinal='2' />
+            <column datatype='integer' name='error_rank' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[error_by_bank.csv.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bank_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bank_name]</local-name>
+            <parent-name>[error_by_bank.csv.csv]</parent-name>
+            <remote-alias>bank_name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>final_error_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[final_error_code]</local-name>
+            <parent-name>[error_by_bank.csv.csv]</parent-name>
+            <remote-alias>final_error_code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fail_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fail_count]</local-name>
+            <parent-name>[error_by_bank.csv.csv]</parent-name>
+            <remote-alias>fail_count</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>error_rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[error_rank]</local-name>
+            <parent-name>[error_by_bank.csv.csv]</parent-name>
+            <remote-alias>error_rank</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Failures (blended)' datatype='integer' name='[Calculation_484981387845353479]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([fail_count])' />
+      </column>
+      <column caption='Failure Rate (blended)' datatype='real' name='[Calculation_484981387845554184]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF SUM([federated.18kjarp0tc8ltx193ixra0nokwor].[Calculation_484981387662069764])=0 &#13;&#10;THEN 0 &#13;&#10;ELSE SUM([fail_count])/SUM([federated.18kjarp0tc8ltx193ixra0nokwor].[Calculation_484981387662069764])&#13;&#10;END' />
+      </column>
+      <column caption='error_by_bank.csv.csv' datatype='table' name='[__tableau_internal_object_id__].[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]' role='measure' type='quantitative' />
+      <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+      <column caption='Error Rank' datatype='integer' name='[error_rank]' role='measure' type='quantitative' />
+      <column caption='Fail Count' datatype='integer' name='[fail_count]' role='measure' type='quantitative' />
+      <column caption='Final Error Code' datatype='string' name='[final_error_code]' role='dimension' type='nominal' />
+      <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/acer/AppData/Local/Temp/TableauTemp/#TableauTemp_09spitr17kbgw511ybqan0e15qjc.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/08/2025 01:25:21 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>bank_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bank_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bank_name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>error_by_bank.csv.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>final_error_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[final_error_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>final_error_code</remote-alias>
+              <ordinal>1</ordinal>
+              <family>error_by_bank.csv.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fail_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[fail_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fail_count</remote-alias>
+              <ordinal>2</ordinal>
+              <family>error_by_bank.csv.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>error_rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[error_rank]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>error_rank</remote-alias>
+              <ordinal>3</ordinal>
+              <family>error_by_bank.csv.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:bank_name:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Axis&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SBI&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;PNB&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ICICI&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;HDFC&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='federated.18kjarp0tc8ltx193ixra0nokwor'>
+        <column caption='Init Count (per bank)' datatype='integer' name='[Calculation_484981387662069764]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='{FIXED [bank_name]: SUM(IF[Pivot Field Names]=&quot;Init Count&quot; THEN [Pivot Field Values] END)}' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='error_by_bank.csv.csv' id='error_by_bank.csv.csv_15C62646F4B44166A74B39F248F45701'>
+            <properties context=''>
+              <relation connection='textscan.13oi6y61kshzcm11alijm03v3mif' name='error_by_bank.csv.csv' table='[error_by_bank.csv#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='bank_name' ordinal='0' />
+                  <column datatype='string' name='final_error_code' ordinal='1' />
+                  <column datatype='integer' name='fail_count' ordinal='2' />
+                  <column datatype='integer' name='error_rank' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='funnel_summary.csv' inline='true' name='federated.18kjarp0tc8ltx193ixra0nokwor' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='funnel_summary.csv' name='textscan.1hp5pq20z8p0311h6bf3s0s6ee2z'>
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='D:\Workplace\UPI Funnel Analysis\Data\Processed\funnel_summary.csv.csv' dataRefreshTime='' directory='D:/Workplace/UPI Funnel Analysis/Data/Processed' filename='C:/Users/acer/AppData/Local/Temp/TableauTemp/0tio5ud0dmqtcy11hh4kx0t8ro1p/funnel_summary.csv.csv.xlsx' interpretationMode='8' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='duration_summary.csv' name='textscan.108kqn604aiwl313ptfku12ydfkq'>
+            <connection class='textscan' directory='D:/Workplace/UPI Funnel Analysis/Data/Processed' filename='duration_summary.csv.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='integer' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Amount Count]' />
+            <value name='[Bankauth Count]' />
+            <value name='[Completed Count]' />
+            <value name='[Init Count]' />
+            <value name='[Pin Count]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[funnel_summary.csv.csv].[amount_count]' />
+              <field name='[funnel_summary.csv.csv].[bankauth_count]' />
+              <field name='[funnel_summary.csv.csv].[completed_count]' />
+              <field name='[funnel_summary.csv.csv].[init_count]' />
+              <field name='[funnel_summary.csv.csv].[pin_count]' />
+            </group>
+          </groups>
+          <relation connection='textscan.1hp5pq20z8p0311h6bf3s0s6ee2z' name='funnel_summary.csv.csv' table='[D:\Workplace\UPI Funnel Analysis\Data\Processed\funnel_summary.csv#csv]' type='table'>
+            <columns character-set='UTF-8' gridOrigin='A1:K6:no:A1:K6:1' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='bank_name' ordinal='0' />
+              <column datatype='integer' name='init_count' ordinal='1' />
+              <column datatype='integer' name='amount_count' ordinal='2' />
+              <column datatype='integer' name='pin_count' ordinal='3' />
+              <column datatype='integer' name='bankauth_count' ordinal='4' />
+              <column datatype='integer' name='completed_count' ordinal='5' />
+              <column datatype='real' name='pct_amount_of_init' ordinal='6' />
+              <column datatype='real' name='pct_pin_of_amount' ordinal='7' />
+              <column datatype='real' name='pct_bankauth_of_pin' ordinal='8' />
+              <column datatype='real' name='pct_completed_of_bankauth' ordinal='9' />
+              <column datatype='real' name='pct_completed_of_init' ordinal='10' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[funnel_summary.csv.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K6:no:A1:K6:1&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bank_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bank_name]</local-name>
+            <parent-name>[funnel_summary.csv.csv]</parent-name>
+            <remote-alias>bank_name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_amount_of_init</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_amount_of_init]</local-name>
+            <parent-name>[funnel_summary.csv.csv]</parent-name>
+            <remote-alias>pct_amount_of_init</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_pin_of_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_pin_of_amount]</local-name>
+            <parent-name>[funnel_summary.csv.csv]</parent-name>
+            <remote-alias>pct_pin_of_amount</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_bankauth_of_pin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_bankauth_of_pin]</local-name>
+            <parent-name>[funnel_summary.csv.csv]</parent-name>
+            <remote-alias>pct_bankauth_of_pin</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_completed_of_bankauth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_completed_of_bankauth]</local-name>
+            <parent-name>[funnel_summary.csv.csv]</parent-name>
+            <remote-alias>pct_completed_of_bankauth</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_completed_of_init</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_completed_of_init]</local-name>
+            <parent-name>[funnel_summary.csv.csv]</parent-name>
+            <remote-alias>pct_completed_of_init</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Stage order' datatype='integer' name='[Calculation_484981387475890176]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Pivot Field Names]    &#13;&#10;WHEN &quot;Init Count&quot; THEN 1&#13;&#10;WHEN  &quot;Amount Count&quot; THEN 2&#13;&#10;WHEN  &quot;Pin Count&quot; THEN 3&#13;&#10;WHEN  &quot;Bankauth Count&quot; THEN 4&#13;&#10;WHEN  &quot;Completed Count&quot; THEN 5&#13;&#10;END' />
+      </column>
+      <column caption='Conversion Rate (%)' datatype='real' name='[Calculation_484981387476459521]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM(IF [Pivot Field Names] = &quot;Completed Count&quot; THEN [Pivot Field Values] END)/&#13;&#10;SUM(IF [Pivot Field Names] = &quot;Init Count&quot; THEN [Pivot Field Values] END))*100' />
+      </column>
+      <column caption='Drop-off % (Stage to Stage)' datatype='real' name='[Calculation_484981387477254146]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1-(SUM([Pivot Field Values])/LOOKUP(SUM([Pivot Field Values]), -1))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Total Txns' datatype='integer' name='[Calculation_484981387658153987]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Pivot Field Names] = &quot;Init Count&quot; THEN [Pivot Field Values] END)' />
+      </column>
+      <column caption='Init Count (per bank)' datatype='integer' name='[Calculation_484981387662069764]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [bank_name]: SUM(IF[Pivot Field Names]=&quot;Init Count&quot; THEN [Pivot Field Values] END)}' />
+      </column>
+      <column caption='Completed Count (per bank)' datatype='integer' name='[Calculation_484981387662643205]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [bank_name] : SUM( IF [Pivot Field Names] = &quot;Completed Count&quot; THEN [Pivot Field Values] END ) }' />
+      </column>
+      <column caption='Conversion % (per bank)' datatype='real' name='[Calculation_484981387662766086]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM ([Calculation_484981387662643205])/SUM([Calculation_484981387662069764])*100' />
+      </column>
+      <column caption='Stage' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+      <column caption='Txn Count' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <column caption='funnel_summary.csv.csv' datatype='table' name='[__tableau_internal_object_id__].[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]' role='measure' type='quantitative' />
+      <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+      <column caption='Pct Amount Of Init' datatype='real' name='[pct_amount_of_init]' role='measure' type='quantitative' />
+      <column caption='Pct Bankauth Of Pin' datatype='real' name='[pct_bankauth_of_pin]' role='measure' type='quantitative' />
+      <column caption='Pct Completed Of Bankauth' datatype='real' name='[pct_completed_of_bankauth]' role='measure' type='quantitative' />
+      <column caption='Pct Completed Of Init' datatype='real' name='[pct_completed_of_init]' role='measure' type='quantitative' />
+      <column caption='Pct Pin Of Amount' datatype='real' name='[pct_pin_of_amount]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/acer/AppData/Local/Temp/TableauTemp/#TableauTemp_1pakciq15oz1rn11co19x0nul9fe.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/08/2025 01:56:19 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>bank_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bank_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bank_name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>funnel_summary.csv.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_amount_of_init</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_amount_of_init]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_amount_of_init</remote-alias>
+              <ordinal>1</ordinal>
+              <family>funnel_summary.csv.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_pin_of_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_pin_of_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_pin_of_amount</remote-alias>
+              <ordinal>2</ordinal>
+              <family>funnel_summary.csv.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_bankauth_of_pin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_bankauth_of_pin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_bankauth_of_pin</remote-alias>
+              <ordinal>3</ordinal>
+              <family>funnel_summary.csv.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_completed_of_bankauth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_completed_of_bankauth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_completed_of_bankauth</remote-alias>
+              <ordinal>4</ordinal>
+              <family>funnel_summary.csv.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_completed_of_init</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_completed_of_init]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_completed_of_init</remote-alias>
+              <ordinal>5</ordinal>
+              <family>funnel_summary.csv.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Pivot</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='funnel_summary.csv.csv' id='funnel_summary.csv.csv_B2EBA7316A754A40BBA052F5D16A901E'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='integer' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Amount Count]' />
+                  <value name='[Bankauth Count]' />
+                  <value name='[Completed Count]' />
+                  <value name='[Init Count]' />
+                  <value name='[Pin Count]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[funnel_summary.csv.csv].[amount_count]' />
+                    <field name='[funnel_summary.csv.csv].[bankauth_count]' />
+                    <field name='[funnel_summary.csv.csv].[completed_count]' />
+                    <field name='[funnel_summary.csv.csv].[init_count]' />
+                    <field name='[funnel_summary.csv.csv].[pin_count]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.1hp5pq20z8p0311h6bf3s0s6ee2z' name='funnel_summary.csv.csv' table='[D:\Workplace\UPI Funnel Analysis\Data\Processed\funnel_summary.csv#csv]' type='table'>
+                  <columns character-set='UTF-8' gridOrigin='A1:K6:no:A1:K6:1' header='yes' locale='en_IN' separator=','>
+                    <column datatype='string' name='bank_name' ordinal='0' />
+                    <column datatype='integer' name='init_count' ordinal='1' />
+                    <column datatype='integer' name='amount_count' ordinal='2' />
+                    <column datatype='integer' name='pin_count' ordinal='3' />
+                    <column datatype='integer' name='bankauth_count' ordinal='4' />
+                    <column datatype='integer' name='completed_count' ordinal='5' />
+                    <column datatype='real' name='pct_amount_of_init' ordinal='6' />
+                    <column datatype='real' name='pct_pin_of_amount' ordinal='7' />
+                    <column datatype='real' name='pct_bankauth_of_pin' ordinal='8' />
+                    <column datatype='real' name='pct_completed_of_bankauth' ordinal='9' />
+                    <column datatype='real' name='pct_completed_of_init' ordinal='10' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='duration_summary.csv' inline='true' name='federated.0mzvase0unzxq4168yh6l1nppxx3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='duration_summary.csv' name='textscan.1q1pyv90o466v41f3f5gr15qkbf3'>
+            <connection class='textscan' directory='D:/Workplace/UPI Funnel Analysis/Data/Processed' filename='duration_summary.csv.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1q1pyv90o466v41f3f5gr15qkbf3' name='duration_summary.csv.csv' table='[duration_summary.csv#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='bank_name' ordinal='0' />
+            <column datatype='real' name='avg_duration_sec' ordinal='1' />
+            <column datatype='integer' name='num_txns_with_both' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[duration_summary.csv.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bank_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bank_name]</local-name>
+            <parent-name>[duration_summary.csv.csv]</parent-name>
+            <remote-alias>bank_name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_duration_sec</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_duration_sec]</local-name>
+            <parent-name>[duration_summary.csv.csv]</parent-name>
+            <remote-alias>avg_duration_sec</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_txns_with_both</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_txns_with_both]</local-name>
+            <parent-name>[duration_summary.csv.csv]</parent-name>
+            <remote-alias>num_txns_with_both</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='duration_summary.csv.csv' datatype='table' name='[__tableau_internal_object_id__].[duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D]' role='measure' type='quantitative' />
+      <column caption='Avg Duration Sec' datatype='real' name='[avg_duration_sec]' role='measure' type='quantitative' />
+      <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+      <column caption='Num Txns With Both' datatype='integer' name='[num_txns_with_both]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/acer/AppData/Local/Temp/TableauTemp/#TableauTemp_0ypxx8z0nlzkz51f5300d04wp9z6.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/09/2025 10:33:52 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>bank_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bank_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bank_name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>duration_summary.csv.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_duration_sec</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_duration_sec]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_duration_sec</remote-alias>
+              <ordinal>1</ordinal>
+              <family>duration_summary.csv.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_txns_with_both</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_txns_with_both]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_txns_with_both</remote-alias>
+              <ordinal>2</ordinal>
+              <family>duration_summary.csv.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='duration_summary.csv.csv' id='duration_summary.csv.csv_E8908AE7E4264493AB8988891BD6EA0D'>
+            <properties context=''>
+              <relation connection='textscan.1q1pyv90o466v41f3f5gr15qkbf3' name='duration_summary.csv.csv' table='[duration_summary.csv#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='bank_name' ordinal='0' />
+                  <column datatype='real' name='avg_duration_sec' ordinal='1' />
+                  <column datatype='integer' name='num_txns_with_both' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0qcml4808kq4lw1amc4r70mxqq06'>
+      <datasources>
+        <datasource caption='error_by_bank.csv' name='federated.0qcml4808kq4lw1amc4r70mxqq06' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0qcml4808kq4lw1amc4r70mxqq06'>
+        <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+        <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]'>
+        <groupfilter function='level-members' level='[none:bank_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_6C7FFC0B516A400DB1FEB452BB506916]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='UPI Funnel Dashboard' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Bank Name' />
+        <param name='target' value='UPI Funnel Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Avg Duration by Bank'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e' fontname='Benton Sans Book' fontsize='12'>Average Transaction Duration (sec) by Bank</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duration_summary.csv' name='federated.0mzvase0unzxq4168yh6l1nppxx3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mzvase0unzxq4168yh6l1nppxx3'>
+            <column-instance column='[avg_duration_sec]' derivation='Avg' name='[avg:avg_duration_sec:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Duration Sec' datatype='real' name='[avg_duration_sec]' role='measure' type='quantitative' />
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+            <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[avg_duration_sec]' derivation='Sum' name='[sum:avg_duration_sec:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0mzvase0unzxq4168yh6l1nppxx3].[none:bank_name:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0mzvase0unzxq4168yh6l1nppxx3].[sum:avg_duration_sec:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mzvase0unzxq4168yh6l1nppxx3].[avg:avg_duration_sec:qk]' scope='cols' value='Average Transaction Duration (in Seconds) by Bank' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='60' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='19' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0mzvase0unzxq4168yh6l1nppxx3].[sum:avg_duration_sec:qk]' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ee5a24</color>
+                <color>#ec6635</color>
+                <color>#ea7347</color>
+                <color>#e87f58</color>
+                <color>#e68b69</color>
+                <color>#e4967a</color>
+                <color>#e2a28b</color>
+                <color>#e0ad9b</color>
+                <color>#deb8ab</color>
+                <color>#dcc3ba</color>
+                <color>#daceca</color>
+                <color>#d9d9d9</color>
+                <color>#c2cec6</color>
+                <color>#adc4b5</color>
+                <color>#99baa5</color>
+                <color>#86b095</color>
+                <color>#74a686</color>
+                <color>#649b78</color>
+                <color>#54916a</color>
+                <color>#46875e</color>
+                <color>#397d52</color>
+                <color>#2e7347</color>
+                <color>#24693d</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.0mzvase0unzxq4168yh6l1nppxx3].[avg:avg_duration_sec:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mzvase0unzxq4168yh6l1nppxx3].[sum:avg_duration_sec:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'><![CDATA[Bank: <[federated.0mzvase0unzxq4168yh6l1nppxx3].[none:bank_name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[Avg Duration: <AVG([avg_duration_sec])> sec]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[Compared to overall avg: <AVG([avg_duration_sec]) - WINDOW_AVG(AVG([avg_duration_sec]))> sec]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='733' />
+                <format attr='maxwidth' value='733' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mzvase0unzxq4168yh6l1nppxx3].[none:bank_name:nk]</rows>
+        <cols>[federated.0mzvase0unzxq4168yh6l1nppxx3].[avg:avg_duration_sec:qk]</cols>
+      </table>
+      <simple-id uuid='{7E87463C-85C6-42A6-9AF2-9A71B88166B2}' />
+    </worksheet>
+    <worksheet name='Conversion by Bank'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e' fontname='Benton Sans Book' fontsize='12'>Bank-wise Conversion Performance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='funnel_summary.csv' name='federated.18kjarp0tc8ltx193ixra0nokwor' />
+          </datasources>
+          <datasource-dependencies datasource='federated.18kjarp0tc8ltx193ixra0nokwor'>
+            <column caption='Conversion Rate (%)' datatype='real' name='[Calculation_484981387476459521]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM(IF [Pivot Field Names] = &quot;Completed Count&quot; THEN [Pivot Field Values] END)/&#13;&#10;SUM(IF [Pivot Field Names] = &quot;Init Count&quot; THEN [Pivot Field Values] END))*100' />
+            </column>
+            <column caption='Stage' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Txn Count' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+            <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_484981387476459521]' derivation='User' name='[usr:Calculation_484981387476459521:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.18kjarp0tc8ltx193ixra0nokwor].[none:bank_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387476459521:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='60' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387476459521:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ae123a</color>
+                <color>#b12046</color>
+                <color>#b53052</color>
+                <color>#b9405f</color>
+                <color>#bd516d</color>
+                <color>#c1627b</color>
+                <color>#c57489</color>
+                <color>#c98798</color>
+                <color>#cd9ba7</color>
+                <color>#d1afb7</color>
+                <color>#d5c3c8</color>
+                <color>#d9d9d9</color>
+                <color>#c3d4d0</color>
+                <color>#aed0c7</color>
+                <color>#9accbf</color>
+                <color>#86c8b7</color>
+                <color>#73c4af</color>
+                <color>#61c0a8</color>
+                <color>#4fbca0</color>
+                <color>#3eb899</color>
+                <color>#2eb491</color>
+                <color>#1eb08a</color>
+                <color>#10ac84</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#555555' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387476459521:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1143' />
+                <format attr='maxwidth' value='1143' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.18kjarp0tc8ltx193ixra0nokwor].[none:bank_name:nk]</rows>
+        <cols>[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387476459521:qk]</cols>
+      </table>
+      <simple-id uuid='{5F3DB2B1-9CEC-4CC2-9E99-C49F2D171B55}' />
+    </worksheet>
+    <worksheet name='Error Breakdown'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e' fontname='Benton Sans Book' fontsize='12'>Top UPI Error Codes by Bank</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_by_bank.csv' name='federated.0qcml4808kq4lw1amc4r70mxqq06' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qcml4808kq4lw1amc4r70mxqq06'>
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+            <column caption='Fail Count' datatype='integer' name='[fail_count]' role='measure' type='quantitative' />
+            <column caption='Final Error Code' datatype='string' name='[final_error_code]' role='dimension' type='nominal' />
+            <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[fail_count]' derivation='None' name='[none:fail_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[final_error_code]' derivation='None' name='[none:final_error_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[fail_count]' derivation='Sum' name='[sum:fail_count:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:fail_count:qk]' included-values='in-range'>
+            <min>26</min>
+            <max>369</max>
+          </filter>
+          <slices>
+            <column>[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:fail_count:qk]</column>
+            <column>[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='100' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+            <format attr='width' field='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:final_error_code:nk]' value='154' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0qcml4808kq4lw1amc4r70mxqq06].[sum:fail_count:qk]</rows>
+        <cols>[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:final_error_code:nk]</cols>
+      </table>
+      <simple-id uuid='{2E10CC9D-0306-4965-BF11-7C6650530B07}' />
+    </worksheet>
+    <worksheet name='Funnel Overview'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e' fontname='Benton Sans Book' fontsize='12'>Overall Funnel Drop-offs</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='funnel_summary.csv' name='federated.18kjarp0tc8ltx193ixra0nokwor' />
+          </datasources>
+          <datasource-dependencies datasource='federated.18kjarp0tc8ltx193ixra0nokwor'>
+            <column caption='Stage order' datatype='integer' name='[Calculation_484981387475890176]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Pivot Field Names]    &#13;&#10;WHEN &quot;Init Count&quot; THEN 1&#13;&#10;WHEN  &quot;Amount Count&quot; THEN 2&#13;&#10;WHEN  &quot;Pin Count&quot; THEN 3&#13;&#10;WHEN  &quot;Bankauth Count&quot; THEN 4&#13;&#10;WHEN  &quot;Completed Count&quot; THEN 5&#13;&#10;END' />
+            </column>
+            <column caption='Drop-off % (Stage to Stage)' datatype='real' name='[Calculation_484981387477254146]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1-(SUM([Pivot Field Values])/LOOKUP(SUM([Pivot Field Values]), -1))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Txn Count' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_484981387475890176]' derivation='Sum' name='[sum:Calculation_484981387475890176:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Pivot Field Values]' derivation='Sum' name='[sum:Pivot Field Values:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_484981387477254146]' derivation='User' name='[usr:Calculation_484981387477254146:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <computed-sort column='[federated.18kjarp0tc8ltx193ixra0nokwor].[none:Pivot Field Names:nk]' direction='ASC' using='[federated.18kjarp0tc8ltx193ixra0nokwor].[sum:Calculation_484981387475890176:qk]' />
+          <filter class='categorical' column='[federated.18kjarp0tc8ltx193ixra0nokwor].[none:bank_name:nk]'>
+            <groupfilter function='level-members' level='[none:bank_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.18kjarp0tc8ltx193ixra0nokwor].[none:bank_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='120' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387477254146:qk]' palette='blue_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387477254146:qk]' value='Drop-off % '>
+              <formatted-text>
+                <run>Drop-off % </run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387477254146:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.18kjarp0tc8ltx193ixra0nokwor].[sum:Pivot Field Values:qk]</rows>
+        <cols>[federated.18kjarp0tc8ltx193ixra0nokwor].[none:Pivot Field Names:nk]</cols>
+      </table>
+      <simple-id uuid='{8B8F3EBD-3874-4F14-9F97-6DF267659F63}' />
+    </worksheet>
+    <worksheet name='KPI - Avg Duration'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e'>Avg Duration</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='duration_summary.csv' name='federated.0mzvase0unzxq4168yh6l1nppxx3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mzvase0unzxq4168yh6l1nppxx3'>
+            <column-instance column='[avg_duration_sec]' derivation='Avg' name='[avg:avg_duration_sec:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Duration Sec' datatype='real' name='[avg_duration_sec]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0mzvase0unzxq4168yh6l1nppxx3].[avg:avg_duration_sec:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#2e4053' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0mzvase0unzxq4168yh6l1nppxx3].[avg:avg_duration_sec:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='24'><![CDATA[<[federated.0mzvase0unzxq4168yh6l1nppxx3].[avg:avg_duration_sec:qk]> sec]]></run>
+                <run fontalignment='0'>Æ&#10;&#10;</run>
+                <run fontalignment='0' fontcolor='#898989' fontsize='14'>Average Duration sec</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4DD6EE57-79F1-4989-AB16-2E4815F33837}' />
+    </worksheet>
+    <worksheet name='KPI - Conversion'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e'>Conversion</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='funnel_summary.csv' name='federated.18kjarp0tc8ltx193ixra0nokwor' />
+          </datasources>
+          <datasource-dependencies datasource='federated.18kjarp0tc8ltx193ixra0nokwor'>
+            <column caption='Init Count (per bank)' datatype='integer' name='[Calculation_484981387662069764]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [bank_name]: SUM(IF[Pivot Field Names]=&quot;Init Count&quot; THEN [Pivot Field Values] END)}' />
+            </column>
+            <column caption='Completed Count (per bank)' datatype='integer' name='[Calculation_484981387662643205]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [bank_name] : SUM( IF [Pivot Field Names] = &quot;Completed Count&quot; THEN [Pivot Field Values] END ) }' />
+            </column>
+            <column caption='Conversion % (per bank)' datatype='real' name='[Calculation_484981387662766086]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM ([Calculation_484981387662643205])/SUM([Calculation_484981387662069764])*100' />
+            </column>
+            <column caption='Stage' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Txn Count' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_484981387662766086]' derivation='User' name='[usr:Calculation_484981387662766086:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#2e4053' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387662766086:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='24'><![CDATA[<[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387662766086:qk]>%]]></run>
+                <run fontalignment='0'>Æ&#10;&#10;</run>
+                <run fontalignment='0' fontcolor='#898989' fontsize='14'>Conversion Rate</run>
+                <run fontalignment='0'>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{59864A08-490A-4508-B2BC-D5AC042B0C59}' />
+    </worksheet>
+    <worksheet name='KPI - Failure Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e'>Failure Rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_by_bank.csv' name='federated.0qcml4808kq4lw1amc4r70mxqq06' />
+            <datasource caption='duration_summary.csv' name='federated.0mzvase0unzxq4168yh6l1nppxx3' />
+            <datasource caption='funnel_summary.csv' name='federated.18kjarp0tc8ltx193ixra0nokwor' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mzvase0unzxq4168yh6l1nppxx3'>
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0qcml4808kq4lw1amc4r70mxqq06'>
+            <column caption='Total Failures (blended)' datatype='integer' name='[Calculation_484981387845353479]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([fail_count])' />
+            </column>
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+            <column caption='Fail Count' datatype='integer' name='[fail_count]' role='measure' type='quantitative' />
+            <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_484981387845353479]' derivation='User' name='[usr:Calculation_484981387845353479:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.18kjarp0tc8ltx193ixra0nokwor'>
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#2e4053' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0qcml4808kq4lw1amc4r70mxqq06].[usr:Calculation_484981387845353479:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='24'><![CDATA[<[federated.0qcml4808kq4lw1amc4r70mxqq06].[usr:Calculation_484981387845353479:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;&#10;</run>
+                <run fontalignment='0' fontcolor='#898989' fontsize='14'>Failures Total</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <join-lod-include-overrides>
+          <column>[federated.0mzvase0unzxq4168yh6l1nppxx3].[bank_name]</column>
+          <column>[federated.18kjarp0tc8ltx193ixra0nokwor].[bank_name]</column>
+        </join-lod-include-overrides>
+      </table>
+      <simple-id uuid='{33638540-F073-4D5A-B11C-46C69934AB39}' />
+    </worksheet>
+    <worksheet name='KPI - Total Txns'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#34495e'>Total Transactions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='funnel_summary.csv' name='federated.18kjarp0tc8ltx193ixra0nokwor' />
+          </datasources>
+          <datasource-dependencies datasource='federated.18kjarp0tc8ltx193ixra0nokwor'>
+            <column caption='Init Count (per bank)' datatype='integer' name='[Calculation_484981387662069764]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [bank_name]: SUM(IF[Pivot Field Names]=&quot;Init Count&quot; THEN [Pivot Field Values] END)}' />
+            </column>
+            <column caption='Stage' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column caption='Txn Count' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_484981387662069764]' derivation='Sum' name='[sum:Calculation_484981387662069764:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.18kjarp0tc8ltx193ixra0nokwor].[sum:Calculation_484981387662069764:qk]' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#2e4053' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.18kjarp0tc8ltx193ixra0nokwor].[sum:Calculation_484981387662069764:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='24'><![CDATA[<[federated.18kjarp0tc8ltx193ixra0nokwor].[sum:Calculation_484981387662069764:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;&#10;</run>
+                <run fontalignment='0' fontcolor='#898989' fontsize='14'>Total Transactions</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{57374C9A-4D24-466E-8F0D-95A0281B137A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='UPI Funnel Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#34495e' fontname='Benton Sans Book'>UPI Transaction Funnel Analysis - Conversion &amp; Drop-off Insights</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#666666' fontsize='10'>Drop-offs, Conversion, and Performance Insights Across Banks</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='error_by_bank.csv' name='federated.0qcml4808kq4lw1amc4r70mxqq06' />
+        <datasource caption='funnel_summary.csv' name='federated.18kjarp0tc8ltx193ixra0nokwor' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0qcml4808kq4lw1amc4r70mxqq06'>
+        <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+        <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.18kjarp0tc8ltx193ixra0nokwor'>
+        <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+        <column-instance column='[bank_name]' derivation='None' name='[none:bank_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='69528' id='21' param='horz' type-v2='layout-flow' w='99034' x='483' y='998'>
+            <zone h='69528' id='13' param='vert' type-v2='layout-flow' w='89143' x='483' y='998'>
+              <zone h='8479' id='14' type-v2='title' w='89143' x='483' y='998'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='200' h='24938' id='23' is-fixed='true' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='89143' x='483' y='9477'>
+                <zone forceUpdate='true' h='24969' hidden-by-user='true' id='38' param='[com.tableau.addfilters].[0.0.0].[https://extensions.tableauusercontent.com/sandbox/add-filters/index.html]' type-v2='dashboard-object' w='89137' x='483' y='10737'>
+                  <add-in add-in-id='com.tableau.addfilters' extension-url='https://extensions.tableauusercontent.com/sandbox/add-filters/index.html' extension-version='0.0.0' instance-id='FDB4CE92B80342048892853350A99993'>
+                    <instance-settings />
+                    <type-settings>
+                      <dashboard />
+                    </type-settings>
+                  </add-in>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='background-color' value='#e6e6e6' />
+                  </zone-style>
+                </zone>
+                <zone-style>
+                  <format attr='border-color' value='#e5e7eb' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='36107' id='24' param='horz' type-v2='layout-flow' w='89143' x='483' y='34415'>
+                <zone fixed-size='835' h='36107' id='25' is-fixed='true' name='Funnel Overview' w='50845' x='483' y='34415'>
+                  <layout-cache minheight='199' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#e5e7eb' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='36107' id='28' name='Conversion by Bank' w='38298' x='51328' y='34415'>
+                  <layout-cache has-max-size-w='true' maxwidth='1223' minwidth='1223' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#e5e7eb' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='164' h='69528' id='20' is-fixed='true' param='vert' type-v2='layout-flow' w='9891' x='89626' y='998'>
+              <zone h='7606' id='22' mode='dropdown' name='KPI - Failure Rate' param='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]' type-v2='filter' w='9891' x='89626' y='998'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='21696' id='26' mode='checklist' name='Funnel Overview' param='[federated.18kjarp0tc8ltx193ixra0nokwor].[none:bank_name:nk]' type-v2='filter' w='9891' x='89626' y='8604'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='16833' id='35' name='Error Breakdown' pane-specification-id='0' param='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]' type-v2='color' w='9891' x='89626' y='30300'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='24480' id='36' is-fixed='true' type-v2='layout-basic' w='99034' x='483' y='70526'>
+            <zone h='24480' id='30' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='50865' x='483' y='70526'>
+              <zone fixed-size='812' h='24438' id='31' is-fixed='true' name='Avg Duration by Bank' w='50844' x='483' y='70574'>
+                <layout-cache minwidth='180' type-h='cell' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#e5e7eb' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='24480' id='37' param='horz' type-v2='layout-flow' w='48169' x='51348' y='70526'>
+              <zone h='24480' id='33' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='48169' x='51348' y='70526'>
+                <zone h='24438' id='34' name='Error Breakdown' w='48190' x='51327' y='70574'>
+                  <layout-cache minheight='184' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#e5e7eb' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='3996' id='39' type-v2='text' w='99034' x='483' y='95006'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#7b7d7d'>Data Source: Simulated UPI Transaction Dataset | Created by Bhumesh Lalwani | Tool: Tableau</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f5f5f581' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f5f6f7' />
+          </zone-style>
+        </zone>
+        <zone h='21973' id='18' name='KPI - Conversion' w='20157' x='22933' y='10737'>
+          <layout-cache fixed-size-h='173' type-h='fixed' type-w='fixed' />
+          <zone-style>
+            <format attr='border-color' value='#e0e0e0' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#e6e6e6' />
+          </zone-style>
+        </zone>
+        <zone h='21973' id='17' name='KPI - Avg Duration' w='20338' x='66989' y='10737'>
+          <layout-cache fixed-size-h='173' type-h='fixed' type-w='fixed' />
+          <zone-style>
+            <format attr='border-color' value='#e0e0e0' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#e6e6e6' />
+          </zone-style>
+        </zone>
+        <zone h='21973' id='19' name='KPI - Failure Rate' w='20157' x='44900' y='10861'>
+          <layout-cache fixed-size-h='176' type-h='fixed' type-w='fixed' />
+          <zone-style>
+            <format attr='border-color' value='#e0e0e0' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#e6e6e6' />
+          </zone-style>
+        </zone>
+        <zone fixed-size='138' h='21973' id='16' is-fixed='true' name='KPI - Total Txns' w='20157' x='1509' y='10986'>
+          <layout-cache type-h='fixed' type-w='fixed' />
+          <zone-style>
+            <format attr='border-color' value='#e0e0e0' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='margin' value='0' />
+            <format attr='background-color' value='#e6e6e6' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#34495e' fontname='Benton Sans Book'>UPI Transaction Funnel Analysis - Conversion &amp; Drop-off Insights</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#666666' fontsize='10'>Drop-offs, Conversion, and Performance Insights Across Banks</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98002' id='40' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+                <zone h='8490' id='14' type-v2='title' w='89137' x='483' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='24969' id='38' param='[com.tableau.addfilters].[0.0.0].[https://extensions.tableauusercontent.com/sandbox/add-filters/index.html]' type-v2='dashboard-object' w='89137' x='483' y='10737'>
+                  <add-in add-in-id='com.tableau.addfilters' extension-url='https://extensions.tableauusercontent.com/sandbox/add-filters/index.html' extension-version='0.0.0' instance-id='FDB4CE92B80342048892853350A99993'>
+                    <instance-settings />
+                    <type-settings>
+                      <dashboard />
+                    </type-settings>
+                  </add-in>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e6' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='174' h='21973' id='18' is-fixed='true' name='KPI - Conversion' w='20157' x='22933' y='10737'>
+                  <layout-cache fixed-size-h='173' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#e0e0e0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e6' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='174' h='21973' id='17' is-fixed='true' name='KPI - Avg Duration' w='20338' x='66989' y='10737'>
+                  <layout-cache fixed-size-h='173' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#e0e0e0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e6' />
+                  </zone-style>
+                </zone>
+                <zone h='7616' id='22' mode='dropdown' name='KPI - Failure Rate' param='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]' type-v2='filter' w='9897' x='89620' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='174' h='21973' id='19' is-fixed='true' name='KPI - Failure Rate' w='20157' x='44900' y='10861'>
+                  <layout-cache fixed-size-h='176' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#e0e0e0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e6' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='174' h='21973' id='16' is-fixed='true' name='KPI - Total Txns' w='20157' x='1509' y='10986'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#e0e0e0' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e6' />
+                  </zone-style>
+                </zone>
+                <zone h='21723' id='26' mode='checkdropdown' name='Funnel Overview' param='[federated.18kjarp0tc8ltx193ixra0nokwor].[none:bank_name:nk]' type-v2='filter' w='9897' x='89620' y='8615'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='278' h='36066' id='25' is-fixed='true' name='Funnel Overview' w='50875' x='483' y='34458'>
+                  <layout-cache minheight='199' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#e5e7eb' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='278' h='36066' id='28' is-fixed='true' name='Conversion by Bank' w='38262' x='51358' y='34458'>
+                  <layout-cache cell-count-h='5' has-max-size-w='true' maxwidth='1223' minwidth='1223' non-cell-size-h='122' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#e5e7eb' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='186' h='24469' id='31' is-fixed='true' name='Avg Duration by Bank' w='50875' x='483' y='70537'>
+                  <layout-cache minwidth='180' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#e5e7eb' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='186' h='24469' id='34' is-fixed='true' name='Error Breakdown' w='48159' x='51358' y='70537'>
+                  <layout-cache minheight='184' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#e5e7eb' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='16854' id='35' name='Error Breakdown' pane-specification-id='0' param='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]' type-v2='color' w='9897' x='89620' y='30338'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3995' id='39' type-v2='text' w='99034' x='483' y='95006'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#7b7d7d'>Data Source: Simulated UPI Transaction Dataset | Created by Bhumesh Lalwani | Tool: Tableau</run>
+                    <run>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f581' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f5f6f7' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9B9FC2A3-7F92-4A01-938E-AD6A3745692A}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' saved-dpi-scale-factor='1.25' source-height='89'>
+    <window class='worksheet' name='Funnel Overview'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.18kjarp0tc8ltx193ixra0nokwor].[none:bank_name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387477254146:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7BF7B2E4-2E60-442E-AE04-20266FB8671F}' />
+    </window>
+    <window class='worksheet' name='Conversion by Bank'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.18kjarp0tc8ltx193ixra0nokwor].[usr:Calculation_484981387476459521:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DC2668F6-EE8A-4031-8548-BD7C3E072FA3}' />
+    </window>
+    <window class='worksheet' name='Avg Duration by Bank'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mzvase0unzxq4168yh6l1nppxx3].[sum:avg_duration_sec:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9DADB600-E92D-4E39-873A-687AA8E69BFF}' />
+    </window>
+    <window class='worksheet' name='Error Breakdown'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2E6684A6-2DA9-4005-A034-15741DAF61A8}' />
+    </window>
+    <window class='worksheet' name='KPI - Total Txns'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E9ADBC08-CAB3-4729-BF57-450BA6CF4A4F}' />
+    </window>
+    <window class='worksheet' name='KPI - Avg Duration'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{65F00D7A-50DE-4B3D-916A-2AB206BA6F3D}' />
+    </window>
+    <window class='worksheet' name='KPI - Conversion'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{736F78A1-D8B4-4B2E-B26B-5267B7EC66E7}' />
+    </window>
+    <window class='worksheet' name='KPI - Failure Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0qcml4808kq4lw1amc4r70mxqq06].[none:bank_name:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D47AA0E7-6FD3-4B4A-812B-39C42BD60087}' />
+    </window>
+    <window class='dashboard' maximized='true' name='UPI Funnel Dashboard'>
+      <viewpoints>
+        <viewpoint name='Avg Duration by Bank'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Conversion by Bank'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Error Breakdown'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Funnel Overview'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Avg Duration'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Conversion'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Failure Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Total Txns'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview selected='Desktop'>
+        <device is-portrait='true' name='Generic Desktop Monitor' type='Desktop' />
+      </device-preview>
+      <simple-id uuid='{1C3F84EE-386C-4AA4-A678-A3FF5B238219}' />
+    </window>
+  </windows>
+  <referenced-extensions>
+    <referenced-extension>
+      <manifest manifest-version='0.1'>
+        <dashboard-extension extension-version='0.0.0' id='com.tableau.addfilters'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>Add Filters</description>
+          <author email='customerservice@tableau.com' name='Tableau' organization='Tableau' website='https://www.tableau.com' />
+          <min-api-version>1.7</min-api-version>
+          <source-location>
+            <url>https://extensions.tableauusercontent.com/sandbox/add-filters/index.html</url>
+          </source-location>
+          <icon>iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYAAABxLuKEAAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAAEagAwAEAAAAAQAAAEYAAAAAnR9tGwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDYuMC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KGV7hBwAACZ9JREFUeAHtnH9sFMcVx2d379bnwxjbQF0bEmKc9g8MUYUpjQNEkKBUuCpx1RoEqps/yo9KSNQIFCEk4AptVX4opvmjSiCBJLRE2AilCiKgJsVtqIpdrDZQE/pLmBCuxqjxb2zf3e72++Z2rLV9ez/sO5s9M9J6dmdnd+d97r2Zt/NmzdijFJGARKU+n09GRtukTX6/X1q5cqW+Zs0ajUMwoUxaIDaCS1xjampq5t69e7eiq6srGxUNm8ppW6zrOlNVlRUUFHyye/fu90hQ6dChQ2W3b9/+oyRJLkVRGG2TLRmGwYLBIJcdgN49ePDgeqm6uvq9UCj0Ira+zs5Od2trq+HxeBgqkzaltfZAGSTIbbhcLjZ79mySWc7MzFSmT59e6sKJTJxn3d3danl5uTJ//nzW29vLZDn9+2LSFLIQTdPY2bNnWUdHR4jKoCBTXTk5Ob/v6el5AVoSunnzpgI4LC8vb1JZ04ULF1hbW5uWlZXlgpK0rV69uklet25dDSj83ev1Zty6dSuwfft2dufOHQ4G2sSoY0q3jTSENIPS6dOn2YEDB4wpU6bwDnjGjBkvr1ixooePSqdOncpvaGi4gspPYGQKogNy79mzh82aNYtDSSezIiDUdVA6c+YMO3HihD537lzqOmRYz859+/YdwClFhh/jWr9+/b0lS5YsRsHN7OxsdyAQCKICwxDO+xrSmHRIkaAUFRWBk0RQqgUUyKpxdAQHW+jy5ctT6+rq/owblKSb5thBgaJIGIW2QP5fAYiLoGAz+NBDUAjO0qVLuysrK8tAsNnUnEA6aE40KNAUDmX58uUEJURQsLGwsdEeEsEhSOmkOXZQMExL06ZN27J//36hKQRlMA1xVggKwbFoznUn9zk2UKiflaApP7KDQnSGgKECK5yqqqqnYVZ/A1nHdchRoLDc3NwN6CJet5gPiT4kDTEl6xnSHIJ09epV78mTJ/+Ec1+DR+iIoTwOKG+Wlpa6m5qaglaZrfu2YKiSE+EkAwrJHhWM0+AkC0pcYJwCJ5lQ4gbzsMNJNhSSd8SoRIWREnXE1OcsWrToAUarJagjRqsJdQJTAYXkjxsMVY4A568YylW8W00InFRBSRjMcDgVFRXPwM9pnAg40aDAeXsJfsqb5KdEG5JJHrsUc1Syu5DMijSoublZPXbs2Mdo6GL4OQFMWaipnrKIBgXO2w8A5WQsP8VOLlGekCmJiygXZlVSUhLYuHHjsvHSnGhQ8JZcRVA2bdoU1XmzymG3P2qNETccrjkoX4y505RoTgQoGuZTFLz7MJhPFd59fk1Qjh49auvRinbHyscMhh4g4KDh7m3btn2IomcBJ6mvD5GgYOaNx3owHbkWbagdq/lYYSUliFRfX6/X1tZShCF05cqVt8rKyp7F5PqTiDYEMIWhLFy4kKGD5tOkMDnr8+PajwZl5syZFYByljTl3LlzY9YU0aDEWymujJATHBH7heZ8BIGeG6tZxYKyd+/e3ybLfKwiJRUM3dgGzqjMaqKgkByjHpXo4kiJNIbg0DnExJ/HTNnv0DEmPJ8TDUp+fv6LqdIUIVPSNUbc2Ko5O3bsOI8Y1ap4O+RoUBBKLd+5c+cHqTAf0XbKUwaGbh4PHCsEusZ6bMZ9NDH6jBcUakdKwdADhsNBFHBVe3u7BgdZwZILEUwfDILRNQSHYsnHjx/Xi4uLZToeTyjUhqT3MXRTa7L2OYcPHy7HcH0efY6CVRXaxYsXrVUHw6ZY3cTgpBnQFBkmGCosLPzWaM0HQ7lcuul1N+VDHhbjgGIpKU8ER/QJAwMDP8Wyi3JoDI8V2z0c7r2OjlsBlz/s2rXrPOJdKmAF7OpHLMdSFp8kURhVb6IKtLRFkuJa2jIuYKhNMB8e5+3v7/dSAJ3CvmQidglA+CnUE790eG2c3QXDy00IW37z0ZzGu/deKn0s953XJKklXjjjBka0G0qgj8b7FdfHndfVEVCt/jN/zae5hd950OJ/CsffY2Z5rPuMO5hYDUra+brwnZr7AtlMaWfN/cFcXmKWx3qOUNNY9Rx7Hq/eGpZNMQWryhIRIu3BoGPiLonI44WT9mDiBTG83iQAYz/yDYdhPZ4EYEbn3DsZjMR9EvJXIm0lN8JE6BwlkVN5pPrWMlR35nBNQpAHG3020ByFuOcLUc0ckQ3m8+E4WvLJzgMjoECuWT9/e7o7oGt6f98Ie9Gyp8g5gVvdNwxD5W/szFDn+Xxqh1o0VenqHbHaUvZkGi24z6rCbO2Drd/vchYYE8qGUx/mN9xuff96X/BJRTKCusczAgwLaMzP5tBLRw7r6cTCOumZG8acOyiXGD4JGJ5gX4ypHr2hI+R9/pXa3Y4CUwl3Ho6r9nlb5+P3PVlfZwoWaMOcbMcdMrUHPXiFxIpnRVENb9aXmEHKMpIj3UPC+9sX3ix2r+d/5Y4CUxf+yEq6UP3dv3zzl6fXtj7ofQoaMxAysFDXogLcTvBCJhv6gM6kDUzNLGaB/v/IPe1v6JKcQRM8VEdcI/Z13ZC+ovVpLxTNedtRYEzZuYJc/PHaWhzXCj+fw7DAoV1etvf4MubxFrOBvn/oP/nhLwbLxXkqQBLX/wv7r2BzIhiSgy1H7LzeXyCxwq8OtST/P8NledcVtnXrAKxG5eZDOaVXX81gXyxAB2TW44WWPyj3Ff5XcyyYehp2o6XKWgHMzM0Jqo+/HGJ1K6LO7fhwX2Fm0R7h8HOioxWc4hNnEoARQASgR2BMAokBEdgmgcYIURPL0x4MYsXclkQeL560B6NpugtfgzJN1xNa8pK+YCrDulHiVdvl7FxWkql28RKzPJbmTJgfQyEUEVeiGJM4RniFl485xFJZyZ3ZZU/M2OH5vPWTpx/Pe6eZaJjlDy0YgkEfglMiGNaUkZHBA3JUBnhivLVWib1P8zV4G+dBNsb2P7SRSCEJQrN4idUZopEGfcbc2NjIKOooNMbtdtM30AyfO/MPxemrK3Ftwjng+BCzft9foHwbbr4vHK6N6zbjZkpY9mrgQ1S2YMGCf1+7dk2H4C58AB+4dOkSyT6oFQQNH4YzLDjUUK5g3e41kuT+/fujckgAhkwqHLuOC0m40riBoQYiMK9s3rz5MyyQfhmLpQ/j/yioADCiuQQHy0XcMLFP582b9zOqgFXeOhZBjqibqoJR/QpjbAw90zhy5Mg3WlpaVuLfJ7itGkP3hlnJWE7Wgi/m38XWT+Zg/vJjfPTDf3nc/QZBmQhxJkJjuJxkVuh3Ij6f/i0SFgsZWICoQXsG+5+JAPTomcMI/B/lLIiJaYJCxgAAAABJRU5ErkJggg==</icon>
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+        </dashboard-extension>
+        <resources>
+          <resource id='name'>
+            <text locale='de_DE'>Filter hinzufügen</text>
+            <text locale='en_GB'>Add Filters</text>
+            <text locale='en_US'>Add Filters</text>
+            <text locale='es_ES'>Añadir filtros</text>
+            <text locale='fr_CA'>Ajouter des filtres</text>
+            <text locale='fr_FR'>Ajouter des filtres</text>
+            <text locale='it_IT'>Aggiungi filtri</text>
+            <text locale='ja_JP'>フィルターの追加</text>
+            <text locale='ko_KR'>필터 추가</text>
+            <text locale='pt_BR'>Adicionar filtros</text>
+            <text locale='sv_SE'>Lägg till filter</text>
+            <text locale='th_TH'>เพิ่มตัวกรอง</text>
+            <text locale='zh_CN'>添加筛选器</text>
+            <text locale='zh_TW'>新增篩選器</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='UPI Funnel Dashboard' />
+      </referenced-views>
+    </referenced-extension>
+  </referenced-extensions>
+</workbook>
