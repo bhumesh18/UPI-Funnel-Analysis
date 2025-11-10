@@ -55,7 +55,7 @@ Understand user drop-offs in a UPI transaction journey:
 ---
 
 ## 🔹 Live Dashboard
-[Tableau Public Link](https://public.tableau.com/) (insert your published link)
+[[Tableau Public Link] ][url](https://public.tableau.com/app/profile/bhumesh.lalwani/viz/UPI_Funnel_Analysis/UPIFunnelDashboard)
 
 ---
 
